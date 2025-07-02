@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salvum me fac</title>
+    <style>
+        /* DungGeunMo 폰트 직접 로드 시도 (woff2 포맷 우선) */
+        @font-face {
+            font-family: 'DungGeunMo';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff2') format('woff2'),
+                 url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap; /* 폰트 로드 중에도 텍스트 표시 */
+        }
+
+        body {
+            background-color: #000000; /* 검은색 배경 */
+            color: #FFFFFF; /* 흰색 글씨 */
+            font-family: 'DungGeunMo', monospace; /* 한글 픽셀 폰트 우선, 없으면 고정폭 폰트 */
+            font-size: 14px; /* 기본 글자 크기 설정 (em 대신 px로 명확하게) */
+            line-height: 1.6; /* 줄 간격 유지 */
+            margin: 30px; /* 여백 유지 */
+            padding: 0;
+            /* 폰트 렌더링 최적화 (일부 브라우저에서 픽셀 폰트가 부드럽게 보이지 않도록) */
+            -webkit-font-smoothing: none; /* Chrome, Safari */
+            font-smooth: never; /* Firefox */
+            image-rendering: pixelated; /* Safari, Chrome, Firefox */
+        }
+
+        .content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 15px;
+            padding-left: 5px; /* 글자를 살짝 왼쪽으로 옮김 */
+            text-align: left; /* 텍스트 정렬을 왼쪽으로 변경 */
+        }
+
+        p {
+            margin-bottom: 20px; /* 문단 아래 간격 유지 */
+            text-align: left; /* 모든 문단을 왼쪽 정렬 */
+        }
+
+        strong {
+            color: #FFFFFF; /* 강조 텍스트도 흰색 */
+            font-weight: normal; /* 도트 폰트 특성상 굵기 조절이 어렵거나 의미 없을 수 있음 */
+        }
+        em { /* 혹시 모를 이탤릭 태그가 사용될 경우를 대비해 기본 스타일 */
+            font-style: normal;
+            color: #FFFFFF;
+        }
+
+        /* 글자 크기 변화폭을 더 키웠습니다 */
+        .uneven-size-extra-small {
+            font-size: 11px; /* 더 작게 */
+        }
+        .uneven-size-small {
+            font-size: 13px; /* 작게 */
+        }
+        .uneven-size-normal {
+            font-size: 14px; /* 기본 */
+        }
+        .uneven-size-large {
+            font-size: 15px; /* 크게 */
+        }
+        .uneven-size-extra-large {
+            font-size: 17px; /* 더 크게 */
+        }
+
+        /* 글자를 완전히 투명하게 만들고, 공간은 차지하도록 함 */
+        .hidden-paragraph { /* 이 클래스가 적용된 문단만 투명화 */
+            opacity: 0 !important; /* 글자를 완전히 투명하게 만듭니다. */
+            font-size: 14px !important; /* 기존 본문 글자 크기 유지 */
+            line-height: 1.6em !important; /* 기존 본문 줄 간격 유지 */
+            margin-top: 40px !important; /* 상단 여백 유지 */
+            text-align: left !important; /* 왼쪽 정렬 */
+            overflow: hidden; /* 내용이 보이지 않도록 함 */
+            white-space: pre-wrap; /* 줄바꿈 유지 */
+            word-break: break-all; /* 긴 단어 강제 줄바꿈 */
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p><span class="uneven-size-normal">양</span> <span class="uneven-size-small">한</span> <span class="uneven-size-large">마리.</span></p>
+        <p><span class="uneven-size-large">양</span> <span class="uneven-size-extra-large">두</span> <span class="uneven-size-normal">마리.</span></p>
+        <p><span class="uneven-size-small">양</span> <span class="uneven-size-normal">세</span> 마<span class="uneven-size-extra-small">리.</span></p>
+        <p><span class="uneven-size-extra-large">양</span> <span class="uneven-size-large">네</span> <span class="uneven-size-normal">마리.</span></p>
+        <p><span class="uneven-size-normal">양</span> <span class="uneven-size-small">다섯</span> <span class="uneven-size-large">마리.</span></p>
+        <p><span class="uneven-size-large">양</span> <span class="uneven-size-extra-small">여섯</span> 마<span class="uneven-size-normal">리.</span></p>
+        <p><span class="uneven-size-small">양</span> <span class="uneven-size-normal">일곱</span> <span class="uneven-size-large">마리.</span></p>
+        <p><span class="uneven-size-normal">양</span> 여<span class="uneven-size-extra-large">덟</span> <span class="uneven-size-small">마리.</span></p>
+        <p><span class="uneven-size-large">양</span> <span class="uneven-size-normal">아홉</span> <span class="uneven-size-extra-small">마리.</span></p>
+        <p><span class="uneven-size-extra-large">양</span> <span class="uneven-size-small">열</span> <span class="uneven-size-normal">마리.</span></p>
+        <p><span class="uneven-size-normal">양</span> 열<span class="uneven-size-large">한</span> <span class="uneven-size-small">마리.</span></p>
+        <p><span class="uneven-size-large">양</span> <span class="uneven-size-normal">열두</span> 마<span class="uneven-size-extra-large">리</span></p>
+        <p><span class="uneven-size-normal">잠에</span> <span class="uneven-size-small">빠져드는</span> <span class="uneven-size-large">것은</span> <span class="uneven-size-extra-small">고역</span><span class="uneven-size-normal">이네요.</span></p>
+        <p><span class="uneven-size-large">또</span> <span class="uneven-size-normal">다시</span> <span class="uneven-size-extra-large">시작되고</span> <span class="uneven-size-small">있어요.</span></p>
+        <p><span class="uneven-size-normal">6번째.</span></p>
+        <p><span class="uneven-size-small">있어서는</span> <span class="uneven-size-large">안</span> <span class="uneven-size-extra-large">되는</span> <span class="uneven-size-normal">6번째가.</span></p>
+        <p><span class="uneven-size-large">보이는</span> <span class="uneven-size-normal">것이</span> <span class="uneven-size-small">아니에요.</span></p>
+        <p><span class="uneven-size-extra-large">들리지</span> <span class="uneven-size-normal">않아요.</span></p>
+        <p><span class="uneven-size-small">냄세가</span> <span class="uneven-size-large">없어요.</span></p>
+        <p><span class="uneven-size-extra-large">맛나지</span> <span class="uneven-size-normal">않아요.</span></p>
+        <p><span class="uneven-size-large">만져지지</span> <span class="uneven-size-small">않아요.</span></p>
+        <p><span class="uneven-size-extra-small">있어서는</span> <span class="uneven-size-normal">안</span> <span class="uneven-size-large">되는</span> <span class="uneven-size-extra-large">것이에요.</span></p>
+        <p><span class="uneven-size-normal">제</span> <span class="uneven-size-small">뇌</span> <span class="uneven-size-large">속을</span> <span class="uneven-size-extra-small">때리고</span> <span class="uneven-size-normal">있어요.</span></p>
+        <p><span class="uneven-size-large">그만.</span></p>
+        <p><span class="uneven-size-normal">제발</span> <span class="uneven-size-small">조용히</span> <span class="uneven-size-extra-large">해주세요.</span></p>
+        <p><span class="uneven-size-small">싫어요.</span></p>
+        <p><span class="uneven-size-large">이거</span> <span class="uneven-size-normal">싫단</span> <span class="uneven-size-extra-small">말이에요.</span></p>
+        <p><span class="uneven-size-large">아.</span></p>
+        <p><span class="uneven-size-extra-large">진짜.</span></p>
+        <p><span class="uneven-size-small">떠들지마.</span></p>
+        <p><span class="uneven-size-large">내</span> <span class="uneven-size-normal">머릿속에서</span> <span class="uneven-size-extra-small">나가.</span></p>
+        <p><span class="uneven-size-normal">다</span> <span class="uneven-size-small">필요없으니까</span> <span class="uneven-size-large">제발</span> <span class="uneven-size-extra-large">다</span> <span class="uneven-size-normal">꺼져.</span></p>
+        <p><span class="uneven-size-small">아니.</span></p>
+        <p><span class="uneven-size-large">아니에요.</span> <span class="uneven-size-normal">죄송해요.</span></p>
+        <p><span class="uneven-size-extra-small">죄송해요.</span> <span class="uneven-size-normal">용서해주세요.</span> <span class="uneven-size-large">진심이</span> <span class="uneven-size-extra-large">아니었어요.</span></p>
+        <p><span class="uneven-size-normal">제가</span> <span class="uneven-size-small">실수했어요.</span> <span class="uneven-size-large">미워하지</span> <span class="uneven-size-extra-small">말아주세요.</span></p>
+        <p><span class="uneven-size-large">그런</span> <span class="uneven-size-normal">말을</span> <span class="uneven-size-small">하고싶었던게</span> <span class="uneven-size-extra-large">아니었어요.</span></p>
+        <p><span class="uneven-size-normal">그냥.</span></p>
+        <p><span class="uneven-size-small">저는.</span> <span class="uneven-size-large">그냥.</span></p>
+        <p><span class="uneven-size-extra-small">그냥.</span></p>
+        <p><span class="uneven-size-normal">저.</span></p>
+        <p><span class="uneven-size-large">미안해요.</span></p>
+        <p><span class="uneven-size-normal">제가.</span></p>
+        <p><span class="uneven-size-extra-large">미안해요.</span></p>
+        <p class="hidden-paragraph">우으.아.아아.아아아아.으흐.흑.흑.아으으.흐흑</p>
+    </div>
+</body>
+</html>
